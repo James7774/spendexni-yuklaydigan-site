@@ -58,9 +58,10 @@ const Footer = ({ t }) => {
   )
 }
 
-const FooterLink = ({ href, children }) => (
+const FooterLink = ({ href, children, ...props }) => (
   <a 
     href={href} 
+    {...props}
     style={{ 
       color: '#24A1DE', 
       textDecoration: 'none', 
