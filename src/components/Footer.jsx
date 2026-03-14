@@ -39,7 +39,7 @@ const Footer = ({ t }) => {
         <div>
           <h4 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '20px', color: '#222' }}>{t.apps}</h4>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <li><FooterLink href="/downloads/app-debug.apk">{t.android}</FooterLink></li>
+            <li><FooterLink href="/downloads/spendex.apk">{t.android}</FooterLink></li>
           </ul>
         </div>
       </div>

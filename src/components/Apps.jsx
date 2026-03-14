@@ -172,7 +172,7 @@ const Apps = ({ t }) => {
       </p>
 
       <div style={{ marginBottom: '32px' }}>
-        <a href="/downloads/app-debug.apk" className="btn-primary" download style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+        <a href="/downloads/spendex.apk" className="btn-primary" download style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
           <Download size={20} />
           {t.download}
         </a>
