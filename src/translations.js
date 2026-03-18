@@ -26,8 +26,8 @@ const translations = {
       desc: "Spendex — bu xavfsizlik va tezlikka e'tibor qaratuvchi bulut xizmatlariga asoslangan zamonaviy moliya ilovasi."
     },
     home: {
-      heroTitle: "Moliya endi sizning qo'lingizda",
-      heroDesc: "Spendex bilan xarajatlarni boshqarish oddiy va zavqli jarayonga aylanadi. Barcha hisob-kitoblar bir joyda.",
+      heroTitle: "Moliya endi sizning qo'lingizda (Spenex)",
+      heroDesc: "Spendex (Spenex) bilan xarajatlarni boshqarish oddiy va zavqli jarayonga aylanadi. Barcha hisob-kitoblar bir joyda.",
       feature1Title: "Aqlli Tahlillar",
       feature1Desc: "Xarajatlaringizni toifalar bo'yicha ko'ring va moliyaviy odatlaringizni tahlil qiling.",
       feature2Title: "Maksimal Xavfsizlik",
@@ -36,9 +36,9 @@ const translations = {
       feature3Desc: "Barcha qurilmalaringizda ma'lumotlar bir zumda yangilanadi. Har doim nazoratda bo'ling."
     },
     apps: {
-      title: "Spendex Mobile",
-      desc: "Tezkor va xavfsiz moliya ilovasi, xarajatlaringizni aqlli boshqarishda sizga yordam beradi.",
-      download: "Android uchun Spendex yuklash (APK)",
+      title: "Spendex Mobile (Spenex)",
+      desc: "Spendex (Spenex) - tezkor va xavfsiz moliya ilovasi, xarajatlaringizni aqlli boshqarishda sizga yordam beradi.",
+      download: "Android uchun Spendex (Spenex) yuklash (APK)",
       allPlatforms: "Barcha platformalar",
       team: "Bu dasturiy ta'minot Nova.X jamoasi tomonidan taqdim etilgan.",
       source: "",
