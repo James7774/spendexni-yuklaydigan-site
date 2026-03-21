@@ -193,9 +193,9 @@ export default function Onboarding({ onFinish }: OnboardingProps) {
                             <Image 
                                 src={getFlagUrl(currentLangObj.country)} 
                                 alt={currentLangObj.name}
-                                width={32}
-                                height={22}
-                                style={{ objectFit: 'cover' }}
+                                width={42}
+                                height={30}
+                                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                             />
                         </div>
                         <span className="selector-name">{currentLangObj.name}</span>
@@ -288,9 +288,9 @@ export default function Onboarding({ onFinish }: OnboardingProps) {
                         <Image 
                             src={getFlagUrl(l.country)} 
                             alt={l.name} 
-                            width={32} 
-                            height={24} 
-                            style={{ borderRadius: '4px', objectFit: 'cover' }}
+                            width={36} 
+                            height={26} 
+                            style={{ borderRadius: '4px', objectFit: 'cover', width: '100%', height: '100%' }}
                         />
                     </span>
                     <span className="lang-name">{l.name}</span>
@@ -370,7 +370,7 @@ export default function Onboarding({ onFinish }: OnboardingProps) {
         }
         .lang-selector-btn:hover { border-color: var(--primary); background: var(--background); }
         .selector-left { display: flex; align-items: center; gap: 16px; }
-        .selector-flag { width: 42px; height: 30px; border-radius: 6px; overflow: hidden; display: flex; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0; }
+        .selector-flag { width: 44px; height: 32px; border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.08); flex-shrink: 0; }
         .selector-name { font-size: 1.1rem; font-weight: 750; color: var(--text-main); }
         .selector-arrow { color: var(--text-secondary); transition: transform 0.3s; }
         .selector-arrow.open { transform: rotate(180deg); color: var(--primary); }
@@ -386,8 +386,9 @@ export default function Onboarding({ onFinish }: OnboardingProps) {
         .lang-list-scroll::-webkit-scrollbar { display: none; }
         .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 1rem; border-radius: 16px; background: var(--background); border: 1px solid var(--border); width: 100%; min-height: 64px; transition: all 0.2s; }
         .lang-item.selected { background: rgba(79, 70, 229, 0.1); border-color: var(--primary); }
-        .lang-left { display: flex; align-items: center; gap: 12px; flex: 1; }
-        .lang-name { font-size: 1rem; font-weight: 700; color: var(--text-main); }
+        .lang-left { display: flex; align-items: center; gap: 14px; flex: 1; }
+        .lang-flag { width: 36px; height: 26px; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .lang-name { font-size: 1.05rem; font-weight: 700; color: var(--text-main); }
 
         .auth-stack { width: 100%; display: flex; flex-direction: column; gap: 1rem; }
         .ob-google-btn {

@@ -233,52 +233,51 @@ export default function GoalsPage() {
                       )}
                    </div>
 
-                   <div style={{ width: '100%' }}>
+                   <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                      <label style={{ 
-                        fontSize: '0.65rem', 
-                        fontWeight: 900, 
-                        color: '#94a3b8', 
-                        textTransform: 'uppercase', 
-                        letterSpacing: '1px',
-                        marginBottom: '6px', 
-                        display: 'block',
-                        textAlign: 'center'
+                        fontSize: '0.8rem', 
+                        fontWeight: 700, 
+                        color: 'var(--text-secondary)', 
+                        textAlign: 'left',
+                        marginLeft: '4px'
                      }}>{tAny.goalName || "Maqsad nomi"}</label>
                      <input 
                         placeholder={t.goalNamePlaceholder} 
                         value={title} onChange={e => setTitle(e.target.value)} required 
                         style={{ 
                           width: '100%', 
-                          padding: '12px 0', 
-                          border: 'none', 
-                          borderBottom: '1.5px solid ' + (darkMode ? '#334155' : '#f1f5f9'),
-                          background: 'transparent', 
-                          color: darkMode ? '#fff' : '#1e293b', 
-                          fontSize: '1.25rem',
-                          fontWeight: 850,
-                          textAlign: 'center',
+                          padding: '16px 20px', 
+                          border: '2px solid var(--border)', 
+                          borderRadius: '16px',
+                          background: 'var(--bg-primary)', 
+                          color: 'var(--text-main)', 
+                          fontSize: '1.05rem',
+                          fontWeight: 700,
                           outline: 'none',
-                          transition: 'border-color 0.3s'
+                          transition: 'all 0.2s ease',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
                         }}
-                        onFocus={(e) => e.target.style.borderColor = '#7000ff'}
-                        onBlur={(e) => e.target.style.borderColor = (darkMode ? '#334155' : '#f1f5f9')}
+                        onFocus={(e) => {
+                           e.target.style.borderColor = '#3b82f6';
+                           e.target.style.background = 'var(--surface)';
+                        }}
+                        onBlur={(e) => {
+                           e.target.style.borderColor = 'var(--border)';
+                           e.target.style.background = 'var(--bg-primary)';
+                        }}
                       />
                    </div>
                 </div>
                 
                 {/* Fixed Alignment for Amounts */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div style={{ width: '100%' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                          <label style={{ 
-                            fontSize: '0.65rem', 
-                            fontWeight: 900, 
-                            color: '#94a3b8', 
-                            textTransform: 'uppercase', 
-                            letterSpacing: '0.5px',
-                            marginBottom: '10px', 
-                            display: 'flex',
-                            alignItems: 'center',
-                            height: '30px' // Fix height to prevent crooked look
+                            fontSize: '0.8rem', 
+                            fontWeight: 700, 
+                            color: 'var(--text-secondary)', 
+                            textAlign: 'left',
+                            marginLeft: '4px'
                          }}>{t.targetAmountLabel}</label>
                          <input 
                             type="text" 
@@ -289,32 +288,35 @@ export default function GoalsPage() {
                             required 
                             style={{ 
                               width: '100%', 
-                              padding: '14px', 
-                              border: '1.5px solid ' + (darkMode ? 'rgba(255,255,255,0.1)' : '#f1f5f9'), 
+                              padding: '16px 14px', 
+                              border: '2px solid var(--border)', 
                               borderRadius: '16px', 
-                              background: darkMode ? 'rgba(255,255,255,0.03)' : '#fcfcfd', 
-                              color: darkMode ? '#fff' : '#1e293b', 
-                              fontSize: '1rem',
-                              fontWeight: 850,
+                              background: 'var(--bg-primary)', 
+                              color: 'var(--text-main)', 
+                              fontSize: '1.05rem',
+                              fontWeight: 800,
                               outline: 'none',
-                              transition: 'all 0.2s'
+                              transition: 'all 0.2s',
+                              textAlign: 'center'
                             }}
-                            onFocus={(e) => e.target.style.borderColor = '#7000ff'}
-                            onBlur={(e) => e.target.style.borderColor = (darkMode ? 'rgba(255,255,255,0.1)' : '#f1f5f9')}
+                            onFocus={(e) => {
+                               e.target.style.borderColor = '#3b82f6';
+                               e.target.style.background = 'var(--surface)';
+                            }}
+                            onBlur={(e) => {
+                               e.target.style.borderColor = 'var(--border)';
+                               e.target.style.background = 'var(--bg-primary)';
+                            }}
                         />
                     </div>
 
-                    <div style={{ width: '100%' }}>
+                    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         <label style={{ 
-                            fontSize: '0.65rem', 
-                            fontWeight: 900, 
-                            color: '#94a3b8', 
-                            textTransform: 'uppercase', 
-                            letterSpacing: '0.5px',
-                            marginBottom: '10px', 
-                            display: 'flex',
-                            alignItems: 'center',
-                            height: '30px' // Fix height to prevent crooked look
+                            fontSize: '0.8rem', 
+                            fontWeight: 700, 
+                            color: 'var(--text-secondary)', 
+                            textAlign: 'left',
+                            marginLeft: '4px'
                         }}>Hozirgi summa</label>
                         <input 
                             type="text" 
@@ -324,18 +326,25 @@ export default function GoalsPage() {
                             onChange={handleCurrentChange} 
                             style={{ 
                               width: '100%', 
-                              padding: '14px', 
-                              border: '1.5px solid ' + (darkMode ? 'rgba(255,255,255,0.1)' : '#f1f5f9'), 
+                              padding: '16px 14px', 
+                              border: '2px solid var(--border)', 
                               borderRadius: '16px', 
-                              background: darkMode ? 'rgba(255,255,255,0.03)' : '#fcfcfd', 
-                              color: darkMode ? '#fff' : '#1e293b', 
-                              fontSize: '1rem',
-                              fontWeight: 850,
+                              background: 'var(--bg-primary)', 
+                              color: 'var(--text-main)', 
+                              fontSize: '1.05rem',
+                              fontWeight: 800,
                               outline: 'none',
-                              transition: 'all 0.2s'
+                              transition: 'all 0.2s',
+                              textAlign: 'center'
                             }}
-                            onFocus={(e) => e.target.style.borderColor = '#7000ff'}
-                            onBlur={(e) => e.target.style.borderColor = (darkMode ? 'rgba(255,255,255,0.1)' : '#f1f5f9')}
+                            onFocus={(e) => {
+                               e.target.style.borderColor = '#3b82f6';
+                               e.target.style.background = 'var(--surface)';
+                            }}
+                            onBlur={(e) => {
+                               e.target.style.borderColor = 'var(--border)';
+                               e.target.style.background = 'var(--bg-primary)';
+                            }}
                         />
                     </div>
                 </div>

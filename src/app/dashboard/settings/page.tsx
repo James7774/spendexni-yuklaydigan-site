@@ -38,7 +38,7 @@ import Image from "next/image";
 import BottomSheet from "@/components/BottomSheet";
 import CenterModal from "@/components/CenterModal";
 
-type SettingsView = "main" | "account" | "payment" | "preferences" | "export";
+type SettingsView = "main" | "account" | "preferences" | "export";
 
 export default function SettingsPage() {
   const {
@@ -295,53 +295,7 @@ export default function SettingsPage() {
         <ChevronRight size={18} color="#cbd5e1" strokeWidth={3} />
       </button>
 
-      {/* Payment Methods */}
-      <button
-        className="settings-item touch-active"
-        onClick={() => setCurrentView("payment")}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "100%",
-          padding: "12px 16px",
-          background: "var(--surface)",
-          border: "1px solid var(--border)",
-          borderRadius: "20px",
-          boxShadow: "var(--shadow-sm)",
-          cursor: "pointer",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-          <div
-            style={{
-              width: "48px",
-              height: "48px",
-              background: darkMode ? "rgba(255,255,255,0.05)" : "#f1f5f9",
-              borderRadius: "15px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Wallet
-              size={22}
-              color={darkMode ? "#fff" : "#1e293b"}
-              strokeWidth={2.5}
-            />
-          </div>
-          <span
-            style={{
-              fontSize: "1rem",
-              fontWeight: 800,
-              color: "var(--text-main)",
-            }}
-          >
-            {tAny.paymentMethods}
-          </span>
-        </div>
-        <ChevronRight size={18} color="#cbd5e1" strokeWidth={3} />
-      </button>
+
 
       {/* Preferences */}
       <button
@@ -1622,7 +1576,6 @@ export default function SettingsPage() {
         {/* Dynamic Content */}
         {currentView === "main" && renderMainView()}
         {currentView === "account" && renderAccountSettings()}
-        {currentView === "payment" && renderPlaceholder(tAny.paymentMethods)}
         {currentView === "preferences" && renderPreferences()}
         {currentView === "export" && renderExportData()}
       </main>
