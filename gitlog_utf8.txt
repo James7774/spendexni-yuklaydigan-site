@@ -1,0 +1,8 @@
+﻿0c09e2a11f3c0098366b3166f1fce2f0f6eb3c96 fix: remove invalid react-router-dom import and fix Link usage
+862e4c75d27e3b8b2173974358b3753ddcf0e680 fix: add privacy-policy, delete-account pages and 404 handler for Google Play review
+b363cf0d50a821ede5bd6355caccbe70566e765b fix(build): rename build output 'out' to 'dist' for Render compatibility
+579b496fd06b83f0ad22874084163975598e0355 fix(build): use legacy-peer-deps to resolve dependency conflicts in Render
+dfff61185c5256095e516014b4f34a6d18d0f7a3 fix: add privacy-policy and delete-account pages for Play Console
+43822f3d3553eb2cfa6cf71b4b7888d2d20e91f4 Add Privacy Policy and Account Deletion pages
+10f80bb790c0b8ad0433e5531b3430d67263db30 Removed payment methods, revamped Goal UI, fixed Language flag clipping
+10868902eae2d9ffef83536e1e6c42047b2359e8 Fixed Export bugs, added Native Share, unified UI settings
