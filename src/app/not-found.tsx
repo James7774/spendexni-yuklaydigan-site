@@ -1,6 +1,5 @@
 "use client";
-import Link from 'react-router-dom'; // Wait, let's use next/link instead as it's a Next.js project.
-import LinkNext from 'next/link';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -24,9 +23,9 @@ export default function NotFound() {
           Izlayotgan sahifangiz boshqa yerga koʻchirilgan yoki umuman mavjud boʻlmasligi mumkin.
         </p>
         
-        <LinkNext href="/" className="btn btn-primary">
+        <Link href="/" className="btn btn-primary">
           Bosh sahifaga qaytish
-        </LinkNext>
+        </Link>
       </div>
     </div>
   );
