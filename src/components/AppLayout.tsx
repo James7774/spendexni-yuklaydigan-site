@@ -63,12 +63,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     setHasSeenOnboarding(true);
   };
 
-  // Check if current path is a public page (Landing, Policy, etc.)
-  const isPublicPage = ['/', '/privacy-policy', '/delete-account'].includes(pathname);
+  // Check if current path is a public policy page
+  const isPublicPolicyPage = ['/privacy-policy', '/delete-account'].includes(pathname);
 
   // Prevent ANY rendering including dashboard flash while checking or mounting
   if (!isMounted || hasSeenOnboarding === null) {
-      if (isPublicPage) return <div>{children}</div>; // Render immediately for SEO/Review
+      if (isPublicPolicyPage) return <div>{children}</div>; // Render immediately for SEO/Review
       return (
         <div style={{ position: 'fixed', inset: 0, background: 'var(--background)', zIndex: 9999999 }}>
            <SplashScreen />
@@ -76,8 +76,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       );
   }
 
-  // If it's a public page (Landing or Policy), just render it without app layouts like splash or onboarding
-  if (isPublicPage) {
+  // If it's a public policy page, just render it without app layouts like splash or onboarding
+  if (isPublicPolicyPage) {
     return (
       <div className="min-h-screen bg-background">
         {children}
