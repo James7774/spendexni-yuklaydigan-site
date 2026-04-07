@@ -63,13 +63,26 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     setHasSeenOnboarding(true);
   };
 
+  // Check if current path is a public policy page
+  const isPublicPolicyPage = ['/privacy-policy', '/delete-account'].includes(pathname);
+
   // Prevent ANY rendering including dashboard flash while checking or mounting
   if (!isMounted || hasSeenOnboarding === null) {
+      if (isPublicPolicyPage) return <div>{children}</div>; // Render immediately for SEO/Review
       return (
         <div style={{ position: 'fixed', inset: 0, background: 'var(--background)', zIndex: 9999999 }}>
            <SplashScreen />
         </div>
       );
+  }
+
+  // If it's a public policy page, just render it without app layouts like splash or onboarding
+  if (isPublicPolicyPage) {
+    return (
+      <div className="min-h-screen bg-background">
+        {children}
+      </div>
+    );
   }
 
   // Case 1: Not logged in -> Show Onboarding/Auth

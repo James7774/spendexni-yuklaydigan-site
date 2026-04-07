@@ -2,38 +2,36 @@ import React from 'react';
 
 export default function PrivacyPolicy() {
   return (
-    <div style={{ padding: '40px 20px', maxWidth: '800px', margin: '0 auto', fontFamily: 'sans-serif', color: '#fff', background: '#0a0c10', minHeight: '100vh' }}>
-      <h1>Privacy Policy</h1>
-      <p>Last updated: April 7, 2026</p>
+    <div className="container mx-auto py-12 px-4 max-w-4xl" style={{ userSelect: 'text', WebkitUserSelect: 'text' }}>
+      <h1 className="text-3xl font-bold mb-8">Spendex - Maxfiylik Siyosati</h1>
+      <p className="mb-4 text-secondary">Oxirgi yangilanish: 2026-yil 7-aprel</p>
       
-      <section>
-        <h2>1. Introduction</h2>
-        <p>Welcome to Spendex. We are committed to protecting your personal information and your right to privacy.</p>
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">1. Maʼlumotlarni yigʻish</h2>
+        <p className="mb-4">
+          Spendex ilovasi va veb-sayti foydalanuvchilarning shaxsiy moliyaviy maʼlumotlarini faqat ilova ichida saqlash va hisob-kitob qilish uchun foydalanadi. Biz sizning ruxsatingizsiz uchinchi shaxslarga maʼlumotlarni uzatmaymiz.
+        </p>
       </section>
 
-      <section>
-        <h2>2. Information We Collect</h2>
-        <p>We collect information that you provide to us, such as your email address when you sign in, and transaction data that you enter into the app to help you track your finances.</p>
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">2. Maʼlumotlardan foydalanish</h2>
+        <p className="mb-4">
+          Siz kiritgan xarajatlar va daromadlar faqat sizga statistik maʼlumotlar koʻrsatish uchun ishlatiladi. Maʼlumotlar qurilmangizda yoki xavfsiz serverlarda saqlanadi.
+        </p>
       </section>
 
-      <section>
-        <h2>3. How We Use Your Information</h2>
-        <p>We use your information to provide, operate, and maintain our application, and to improve your user experience by generating charts and reports.</p>
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">3. Xavfsizlik</h2>
+        <p className="mb-4">
+          Sizning maʼlumotlaringiz xavfsizligini taʼminlash uchun biz zamonaviy shifrlash usullaridan foydalanamiz.
+        </p>
       </section>
 
-      <section>
-        <h2>4. Data Security</h2>
-        <p>We implement a variety of security measures to maintain the safety of your personal information. Your data is stored securely using Firebase services.</p>
-      </section>
-
-      <section>
-        <h2>5. Your Rights</h2>
-        <p>You have the right to access, update, or delete your information at any time directly through the app settings.</p>
-      </section>
-
-      <section>
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at support@spendex.store.</p>
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-4">4. Bogʻlanish</h2>
+        <p className="mb-4">
+          Maxfiylik siyosati boʻyicha savollaringiz boʻlsa, biz bilan spendex.app@gmail.com orqali bogʻlanishingiz mumkin.
+        </p>
       </section>
     </div>
   );
